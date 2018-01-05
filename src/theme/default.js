@@ -61,8 +61,7 @@ function renderComments({ meta, comments, commentReactions, currentPage, user, e
     errorBlock.className = 'gitment-comments-error'
 
     if (error === NOT_INITIALIZED_ERROR
-      && user.login
-      && user.login.toLowerCase() === instance.owner.toLowerCase()) {
+      && user.login) {
       const initHint = document.createElement('div')
       const initButton = document.createElement('button')
       initButton.className = 'gitment-comments-init-btn'
